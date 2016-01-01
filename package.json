@@ -2,6 +2,11 @@
   "name": "cljs-webpack-deps",
   "version": "1.0.0",
   "description": "Trying out using npm dependencies via webpack in clojurescript.",
+  "scripts": {
+    "build": "npm run dev && npm run min",
+    "dev": "webpack --output-filename webpack-deps.js",
+    "min": "webpack --optimize-minimize --output-filename webpack-deps.min.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/glenjamin/cljs-webpack-deps.git"
@@ -14,6 +19,7 @@
   "homepage": "https://github.com/glenjamin/cljs-webpack-deps#readme",
   "dependencies": {
     "react-d3-components": "^0.6.0",
-    "react-youtube": "^5.0.0"
+    "react-youtube": "^5.0.0",
+    "webpack": "^1.12.9"
   }
 }

@@ -1,19 +1,22 @@
 (ns cljs-webpack-deps.core
-  (:require [reagent.core :as reagent :refer [atom]]))
+  (:require [reagent.core :as r]
+            [cljs-webpack-deps.external :as x]))
 
 (enable-console-print!)
 
-(println "Edits to this text should show up in your developer console.")
+(defonce app-state (r/atom {:text "Hello world!"}))
 
-;; define your app data so that it doesn't get over-written on reload
+(defn video-player []
+  (let [state (r/atom :paused)]
+    (fn []
+      [:div
+       [:h2 (name @state)]
+       [x/YouTube {:videoId "G7Z_g2fnEDg"
+                   :onPlay #(reset! state :playing)
+                   :onPause #(reset! state :paused)}]])))
 
-(defonce app-state (atom {:text "Hello world!"}))
-
-(defn hello-world []
-  [:h1 (:text @app-state)])
-
-(reagent/render-component [hello-world]
-                          (. js/document (getElementById "app")))
+(r/render-component [video-player]
+                    (. js/document (getElementById "app")))
 
 
 (defn on-js-reload []
