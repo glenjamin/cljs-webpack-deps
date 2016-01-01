@@ -1,0 +1,15 @@
+{
+  "name": "cljs-webpack-deps",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glenjamin/cljs-webpack-deps.git"
+  },
+  "author": "Glen Mailer <glen@stainlessed.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glenjamin/cljs-webpack-deps/issues"
+  },
+  "homepage": "https://github.com/glenjamin/cljs-webpack-deps#readme"
+}
