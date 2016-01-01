@@ -1,5 +1,5 @@
-(defproject cljs-webpack-deps "0.1.0-SNAPSHOT"
-  :description ""
+(defproject cljs-webpack-deps "1.0.0"
+  :description "Trying out using npm dependencies via webpack in clojurescript."
   :license {:name "MIT"}
 
   :dependencies [[org.clojure/clojure "1.7.0"]
