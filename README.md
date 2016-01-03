@@ -8,8 +8,7 @@ I just want to try something out simply
 
 ## TODO
 
-* lein-npm
-* clsjbuild pre-hooks
+* react d3
 * react DnD
 
 ## License
