@@ -11,6 +11,12 @@ I just want to try something out simply
 * react d3
 * react DnD
 
+## Run
+
+    lein npm install
+    lein cljsbuild once dev
+    lein figwheel
+
 ## License
 
 Copyright © 2016 Glen Mailer
